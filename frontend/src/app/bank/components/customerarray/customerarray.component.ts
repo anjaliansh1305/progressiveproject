@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { of } from 'rxjs';
-// import { Customer } from '../../types/Customer';
+//import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+//import { of } from 'rxjs';
 import { CustomerTS } from '../../types/tstypes/Customerts';
  
 @Component({
   selector: 'app-customerarray',
-  //standalone: true,
-  //imports: [],
+  // standalone: true,
+  // imports: [],
   templateUrl: './customerarray.component.html',
   styleUrls: ['./customerarray.component.css']
 })
 export class CustomerarrayComponent {
-  customer: CustomerTS[]=[
-    new CustomerTS("John Doe", "john@example.com", "john_doe", "password123", "User", "1")
-  ];
+  customers:CustomerTS[]= [
+    new CustomerTS("Fayas","fayas@gmail.com","fayas_ahamed","fayas","Team Lead","1"),
+    new CustomerTS("Fayas","fayas@gmail.com","fayas_ahamed","fayas","Team Lead","1"),
+    new CustomerTS("Fayas","fayas@gmail.com","fayas_ahamed","fayas","Team Lead","1")
+];
  
 }
+ 
