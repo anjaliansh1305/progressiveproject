@@ -34,11 +34,12 @@ public class AccountController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-    @GetMapping("/{accountId}")
+ @GetMapping("/{accountId}")
+   
     public ResponseEntity<Accounts> getAccountById(@PathVariable int accountId) {
         try {
             Accounts accounts = accountService.getAccountById(accountId);
+            
             if (accounts != null) {
                 return new ResponseEntity<>(accounts, HttpStatus.OK);
             } else {
